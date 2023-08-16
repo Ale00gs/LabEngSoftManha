@@ -1,0 +1,116 @@
+:root {
+    --color01: black;
+    --color02: white;
+    --color03: #e2c7fd;
+    --color04: #62d1dd;
+    --color05: #b8b7b7;
+    --color06: #14818d;
+    --color07: #8235affb;
+    --color08: #d36e87fb;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(90deg, var(--color03), var(--color08));
+    /* background-repeat: no-repeat; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.principal-title {
+    text-transform: uppercase;
+}
+
+h1 {
+    color: var(--color02);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 1px var(--color01);
+}
+
+ul {
+    list-style: none;
+    text-transform: uppercase;
+
+}
+
+.list {
+    text-decoration: none;
+}
+
+.list:hover {
+    background-color: var(--color05);
+}
+
+.button-size {
+    transform: scale(0.7);
+    width: 15em;
+    height: 0px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.button a {
+    color: var(--color02);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color06);
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px var(--color01);
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 var(--color07), 0 10px 0 var(--color04);
+    -moz-box-shadow: inset 0 1px 0 var(--color07), 0 10px 0 var(--color04);
+    box-shadow: inset 0 1px 0 var(--color07), 0 10px 0 var(--color04);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color01);
+}
+
+.button a:active {
+    top: 10px;
+    text-shadow: 0px 1px 0px var(--color02);
+    background-color: var(--color07);
+    color: var(--color01);
+    -webkit-box-shadow: inset 0 1px 0 var(--color07), inset 0 -3px 0 var(--color03);
+    -moz-box-shadow: inset 0 1px 0 var(--color07), inset 0 -3pxpx 0 var(--color03);
+    box-shadow: inset 0 1px 0 var(--color07), inset 0 -3px 0 var(--color03);
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: var(--color01);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+a {
+    background-color: var(--color02);
+    border: 2px solid var(--color01);
+    border-radius: 10px;
+    color: var(--color01);
+    padding: 5px;
+}
+
+li {
+    padding: 20px;
+}
