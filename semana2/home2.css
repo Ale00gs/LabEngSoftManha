@@ -1,0 +1,133 @@
+:root {
+    --color01: black;
+    --color02: white;
+    --color03: #fcdaad;
+    --color04: #dd7d45;
+    --color05: #747474;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(90deg, var(--color03), var(--color04));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button-size {
+    transform: scale(0.6);
+    width: 15em;
+    height: 0px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+
+.button a {
+    color: var(--color02);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color01);
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px var(--color01);
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+    -moz-box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+    box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color01);
+}
+
+.button a:hover {
+    background-color: #999797;
+}
+
+.button a:active {
+    top: 10px;
+    text-shadow: 0px 1px 0px var(--color02);
+    background-color: var(--color03);
+    color: var(--color01);
+    -webkit-box-shadow: inset 0 1px 0 var(--color03), inset 0 -3px 0 var(--color03);
+    -moz-box-shadow: inset 0 1px 0 var(--color03), inset 0 -3pxpx 0 var(--color03);
+    box-shadow: inset 0 1px 0 var(--color03), inset 0 -3px 0 var(--color03);
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: var(--color01);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+h2{
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px var(--color02);
+}
+
+aside p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 20px;
+    margin: 60px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+label{
+    color: var(--color01);
+}
+
+.input-area {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.input-area button {
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 4em;
+    text-transform: uppercase;
+    color: var(--color02);
+    font-weight: bolder;
+    background-color: var(--color05);
+    text-shadow: 1px 1px 1px var(--color01);
+    border: 2px solid var(--color01);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.input-area button:hover {
+    background-color: #999797;
+}
+
+.input-area input {
+    padding: 5px;
+}

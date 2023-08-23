@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Array Dinâmico</title>
+    <link rel="stylesheet" href="./home2.css">
+</head>
+
+<body>
+    <h2>Atividades da Semana 2</h2>
+    <div class="button-size">
+        <div ontouchstart="">
+            <div class="button">
+                <a class="button-text" href="../index.html">voltar</a>
+            </div>
+        </div>
+    </div>
+    <aside>
+        <p>Implemente um script com um array cujos valores
+            sejam adicionados dinamicamente pelo usuário
+            utilizando-se formulário. A cada nova inserção exiba
+            todos os dados cadastrados em ordem alfabética em
+            uma lista ordenada do html.</p>
+    </aside>
+    <section class="input-area">
+        <form id="formulario-dados">
+            <label for="valor">Digite um valor:</label>
+            <input type="text" id="valor" name="valor">
+            <button type="button" onclick="adicionarValor()">Adicionar</button>
+        </form>
+    </section>
+    <h2>Dados Cadastrados:</h2>
+    <div id="lista-dados"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
