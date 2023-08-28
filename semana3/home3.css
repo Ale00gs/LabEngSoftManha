@@ -1,8 +1,8 @@
 :root {
     --color01: black;
     --color02: white;
-    --color03: #d8c1f1;
-    --color04: #b13ce7;
+    --color03: #d3baee;
+    --color04: #532b66;
     --color05: #747474;
     --color06: #a04bc7;
     --cor-cartao-inicial: rgba(255, 255, 255, 0.1);
@@ -129,7 +129,6 @@ a {
     text-decoration: none;
     font-weight: 800;
     text-transform: uppercase;
-    padding: 50px;
 }
 
 aside p {
@@ -212,7 +211,7 @@ aside p {
 }
 
 #palindromo input {
-    padding: 5px 10px 5px 10px;
+    padding: 4px 8px 4px 8px;
     border-radius: 10px;
     color: var(--color01);
     font-size: 15px;
