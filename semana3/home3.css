@@ -1,0 +1,242 @@
+:root {
+    --color01: black;
+    --color02: white;
+    --color03: #d8c1f1;
+    --color04: #b13ce7;
+    --color05: #747474;
+    --color06: #a04bc7;
+    --cor-cartao-inicial: rgba(255, 255, 255, 0.1);
+    --cor-cartao-hover: rgba(255, 255, 255, 0.2);
+    --sombra-cartao: 0 2px 5px rgba(0, 0, 0, 0.788);
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(90deg, var(--color03), var(--color04));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.button-size {
+    transform: scale(0.6);
+    width: 15em;
+    height: 0px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.button a {
+    color: var(--color02);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color01);
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px var(--color01);
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+    -moz-box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+    box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color01);
+}
+
+.button a:hover {
+    background-color: #999797;
+}
+
+.button a:active {
+    top: 10px;
+    text-shadow: 0px 1px 0px var(--color02);
+    background-color: var(--color03);
+    color: var(--color01);
+    -webkit-box-shadow: inset 0 1px 0 var(--color03), inset 0 -3px 0 var(--color03);
+    -moz-box-shadow: inset 0 1px 0 var(--color03), inset 0 -3pxpx 0 var(--color03);
+    box-shadow: inset 0 1px 0 var(--color03), inset 0 -3px 0 var(--color03);
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: var(--color01);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+h2 {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px var(--color02);
+}
+
+ul {
+    list-style: none;
+    padding: 7em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+li {
+    background-color: var(--cor-cartao-inicial);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--sombra-cartao);
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+    width: 300px;
+}
+
+li:hover {
+    background-color: var(--cor-cartao-hover);
+    transform: translateY(-5px);
+}
+
+a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 50px;
+}
+
+aside p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 20px;
+    margin: 60px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+}
+
+/* EXERCÍCIO 1*/
+
+#data-container {
+    font-weight: 800;
+    font-size: 20px;
+    padding: 5em;
+    border-radius: 10px;
+    box-shadow: var(--sombra-cartao);
+    transition: transform 0.2s, background-color 0.2s;
+    width: 20em;
+}
+
+
+/* EXERCÍCIO 2*/
+
+#clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: var(--color04);
+    border-radius: 20px;
+    box-shadow: var(--sombra-cartao);
+}
+
+#clock div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color02);
+    background: rgba(5, 5, 5, .9);
+    box-shadow: var(--sombra-cartao);
+    border-radius: 20px;
+    letter-spacing: 3px;
+}
+
+#clock span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+#clock span.tempo {
+    font-size: 10px;
+}
+
+/* EXERCÍCIO 3*/
+
+#palindromo {
+    width: 30em;
+}
+
+#palindromo label {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
+
+#palindromo input {
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    color: var(--color01);
+    font-size: 15px;
+    font-weight: 700;
+    border-color: var(--color04);
+}
+
+#palindromo input:hover {
+    border-color: var(--color01);
+}
+
+#palindromo button {
+    cursor: pointer;
+    color: var(--color01);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+#palindromo button:hover {
+    cursor: pointer;
+    background-color: var(--color06);
+    color: var(--color02);
+}
