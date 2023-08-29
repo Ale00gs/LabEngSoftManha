@@ -211,7 +211,7 @@ aside p {
 }
 
 #palindromo input {
-    padding: 4px 8px 4px 8px;
+    padding: 2px 8px 2px 8px;
     border-radius: 10px;
     color: var(--color01);
     font-size: 15px;
@@ -231,7 +231,7 @@ aside p {
     font-size: 15px;
     text-align: center;
     border-radius: 10px;
-    padding: 4px 8px 4px 8px;
+    padding: 2px 8px 2px 8px;
 }
 
 #palindromo button:hover {
