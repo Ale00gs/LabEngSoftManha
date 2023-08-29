@@ -201,7 +201,8 @@ aside p {
 /* EXERCÍCIO 3*/
 
 #palindromo {
-    width: 30em;
+    width: 40em;
+    height: 5em;
 }
 
 #palindromo label {
