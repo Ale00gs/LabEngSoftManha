@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav id="cadastroForm">
+        <h1>Formulário de cadastro</h1>
+        <label for="tipo">Selecione o tipo de cadastro:</label>
+        <select id="tipo" name="tipo">
+            <option value="aluno">Aluno</option>
+            <option value="professor">Professor</option>
+        </select>
+        <div class="button-size">
+            <div ontouchstart="">
+                <div class="button">
+                    <a class="button-text" href="../home4.html">voltar</a>
+                </div>
+            </div>
+        </div>
+        <img src="Typing.png" alt="A imagem contém uma mão digitando">
+    </nav>
+
+    <section>
+        <form>
+            <h1 class="title">Preencha com os seus dados</h1>
+
+            <div class="align">
+                <label for="nome" class="form_label">Nome:</label>
+                <input type="text" id="nome" name="nome" class="form_input" placeholder="Digite o seu nome completo"
+                    required>
+
+                <label for="matricula" class="form_label">Matrícula:</label>
+                <input type="text" name="matricula" class="form_input" id="matricula"
+                    placeholder="Digite a sua matrícula" required>
+            </div>
+
+            <div class="align">
+                <label for="email" class="form_label">Email:</label>
+                <input type="email" id="email" class="form_input" name="email" placeholder="fulano@gmail.com" required>
+
+                <label for="data_nascimento" class="form_label">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" class="form_input" name="data_nascimento"
+                    placeholder="Digite a sua data de nascimento" required>
+            </div>
+
+            <div class="align">
+                <label for="telefone_fixo" class="form_label">Telefone fixo:</label>
+                <input type="tel" name="telefone_fixo" class="form_input" id="telefone_fixo" placeholder="(00)0000-0000"
+                    required>
+
+                <label for="telefone_celular" class="form_label">Telefone celular:</label>
+                <input type="tel" name="telefone_celular" class="form_input" id="telefone_celular"
+                    placeholder="(00)90000-0000" required>
+            </div>
+
+            <!-- Aluno -->
+            <div id="alunoArea" class="align">
+                <label for="curso" class="form_label">Curso:</label>
+                <input type="text" id="curso" class="form_input" name="curso" placeholder="Engenharia de Software">
+            </div>
+
+            <!-- Professor -->
+            <div id="professorArea" class="align">
+                <label for="area_atuacao" class="form_label">Área de Atuação:</label>
+                <input type="text" id="area_atuacao" class="form_input" name="area_atuacao"
+                    placeholder="Ex: Segurança Digital">
+                <label for="link_lattes" class="form_label">Link Lattes:</label>
+                <input type="text" id="link_lattes" class="form_input" name="link_lattes"
+                    placeholder="Endereço url lattes">
+            </div>
+        </form>
+
+        <div class="button_area">
+            <button type="submit">Enviar</button>
+            <button type="reset">Redefinir</button>
+        </div>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

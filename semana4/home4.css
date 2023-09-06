@@ -1,0 +1,135 @@
+:root {
+    --background-color: #ffaf81;
+    --background-color2: #ffe0ce;
+    --border-color: #000000;
+    --main-color: #ff5100;
+    --button-background: #ffbb00;
+    --button-text: #000000;
+    --button-border: 2px solid #000000;
+    --button-hover-background: #ff9900;
+    --button-hover-text: #ffffff;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --text-shadow-color: rgba(0, 0, 0, 0.5);
+    --color01: black;
+    --color02: white;
+    --color03: #eee2ba;
+    --color04: #c4833a;
+    --color05: #747474;
+    --color06: #c79c4b;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.button-size {
+    transform: scale(0.6);
+    width: 10em;
+    height: 0px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.button a {
+    color: var(--color02);
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color01);
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px var(--color01);
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+    -moz-box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+    box-shadow: inset 0 1px 0 var(--color03), 0 10px 0 var(--color04);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color01);
+}
+
+.button a:hover {
+    background-color: #999797;
+}
+
+.button a:active {
+    top: 10px;
+    text-shadow: 0px 1px 0px var(--color02);
+    background-color: var(--color03);
+    color: var(--color01);
+    -webkit-box-shadow: inset 0 1px 0 var(--color03), inset 0 -3px 0 var(--color03);
+    -moz-box-shadow: inset 0 1px 0 var(--color03), inset 0 -3pxpx 0 var(--color03);
+    box-shadow: inset 0 1px 0 var(--color03), inset 0 -3px 0 var(--color03);
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: var(--color01);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+#container {
+    background-color: var(--background-color2);
+    border: 5px solid var(--border-color);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--main-color);
+    text-shadow: 2px 2px 4px var(--text-shadow-color);
+    text-transform: uppercase;
+}
+
+.exercise-button {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    text-decoration: none;
+    border: var(--button-border);
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+.exercise-button:hover {
+    background-color: var(--button-hover-background);
+    color: var(--button-hover-text);
+}
