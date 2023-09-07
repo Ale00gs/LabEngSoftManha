@@ -1,4 +1,4 @@
-:root{
+:root {
     --color01: #807282;
     --color02: #f9c7c2;
     --color03: #f6afa9;
@@ -11,13 +11,12 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: var(--color02);
     color: var(--color07);
 }
 
-nav#cadastroForm {
+nav {
     background-color: var(--color01);
     position: fixed;
     z-index: 200;
@@ -32,40 +31,24 @@ nav#cadastroForm {
     border: 2px solid #000000;
 }
 
-nav#cadastroForm h1{
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px var(--color04);
-}
-
-nav#cadastroForm label {
+nav p {
     text-shadow: 1px 1px 2px var(--color04);
-    padding: 15px;
+    margin-top: 5em;
+    padding: 1px;
     font-weight: 700;
     font-size: 18px;
+    text-align: justify;
 }
 
-nav#cadastroForm select {
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    border-radius: 10px;
-    text-transform: uppercase;
-    color: var(--color07);
-    background-color: var(--color03);
-    font-weight: 700;
-    border: 1px solid #000000;
-    cursor: pointer;
-}
-
-nav#cadastroForm img {
+nav img {
     width: 350px;
-    padding-top: 2em;
+    margin-bottom: 100px;
 }
 
 .button-size {
-    transform: scale(0.5);
+    transform: scale(0.6);
     height: 0px;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .button {
@@ -85,15 +68,12 @@ nav#cadastroForm img {
     display: block;
     position: relative;
     padding: 15px 20px;
-
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px var(--color01);
     filter: dropshadow(color=#000, offx=0px, offy=1px);
-
     -webkit-box-shadow: inset 0 1px 0 var(--color07), 0 10px 0 var(--color03);
     -moz-box-shadow: inset 0 1px 0 var(--color07), 0 10px 0 var(--color03);
     box-shadow: inset 0 1px 0 var(--color07), 0 10px 0 var(--color03);
-
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -129,68 +109,38 @@ nav#cadastroForm img {
     border-radius: 5px;
 }
 
+.menu {
+    width: 300px;
+    margin-top: 10px;
+}
 
-section {
-    margin-left: 400px;
-    margin-top: 30px;
-    padding: 20px;
-    width: 100%;
+#carForm {
+    margin-left: 330px;
+    margin-top: 10em;
+    padding: 5px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-indent: 0%;
 }
 
-.title {
+#carForm label {
     text-transform: uppercase;
-    text-align: center;
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left; 
+    width: 100%;
 }
 
-.align {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.form_label {
-    display: inline-block;
-    width: 100px;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    padding-right: 2px;
-    margin: 7px;
-}
-
-.form_input {
+#carForm input[type="text"],
+#carForm input[type="number"] {
     margin: 8px;
     padding: 10px;
     border: 1px solid var(--color07);
     border-radius: 5px;
 }
 
-.button_area {
-    width: 100%;
-    height: 70px;
-    background-color: var(--color04);
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid #000000;
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    justify-content: center; 
-}
-
-.button_area button {
+#carForm input[type="button"] {
     width: 150px;
     height: 50px;
     text-align: center;
@@ -201,17 +151,60 @@ section {
     font-weight: 700;
     border: 1px solid #000000;
     cursor: pointer;
+    margin-top: 100px;
 }
 
-.button_area button:first-child {
-    margin-right: 80px;
-    margin-left: 26em;
-}
-
-.button_area button:hover {
+#carForm input[type="button"]:hover {
     background-color: var(--color03);
 }
 
-.button_area button:active {
+#carForm input[type="button"]:active {
     background-color: var(--color02);
+}
+
+.button-reset {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: var(--color07);
+    background-color: var(--color01);
+    font-weight: 700;
+    border: 1px solid #000000;
+    cursor: pointer;
+    
+}
+
+.button-reset:hover {
+    background-color: var(--color03);
+}
+
+.button-reset:active {
+    background-color: var(--color02);
+}
+
+#resultado {
+    position: fixed;
+    bottom: 0;
+    left: 330px;
+    width: calc(100% - 330px);
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: var(--color04);
+    border: 2px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultado h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#resultado p {
+    font-size: 15px;
+    margin-top: 5px;
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Carro</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="button-size">
+            <div ontouchstart="">
+                <div class="button">
+                    <a class="button-text" href="../home4.html">voltar</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <p>Preencha os campos  para exibir 
+                quantos anos o veículo tem de utilização juntamente com seu valor de 
+                mercado.</p>
+        </div>
+        <img src="./car2.png" alt="A imagem contém um carro">
+    </nav>
+    <form id="carForm">
+        <div class="input-group">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" required>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" required>
+
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="kilometragem">Kilometragem:</label>
+            <input type="number" id="kilometragem" required>
+
+            <label for="valor_fipe">Valor FIPE:</label>
+            <input type="number" id="valor_fipe" required>
+        </div>
+    
+        <div>
+            <input type="button" value="Calcular" onclick="calcularCarro()">
+            <button class="button-reset" type="reset">Redefinir</button>
+        </div>
+    </form>
+    
+
+    <div id="resultado">
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
