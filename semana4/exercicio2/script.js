@@ -8,7 +8,7 @@ function calcularCarro() {
 
     if (!marca || !modelo || isNaN(ano) || !cor || isNaN(quilometragem) || isNaN(valor_fipe)) {
         alert("Por favor, preencha todos os campos antes de calcular.");
-        redefinirFormulario(event);
+        window.location.reload();
         return;
     }
 
@@ -34,9 +34,9 @@ function calcularCarro() {
         }
     };
 
-    function redefinirFormulario(event){
-        window.location.reload();
-    }
+function redefinirFormulario(event){
+    window.location.reload();
+}    
 
     // Resultado
     const anosDeUso = carro.anosUtilizacao();
