@@ -3,12 +3,12 @@ function calcularCarro() {
     const modelo = document.getElementById("modelo").value;
     const ano = parseInt(document.getElementById("ano").value);
     const cor = document.getElementById("cor").value;
-    const kilometragem = parseFloat(document.getElementById("kilometragem").value);
+    const quilometragem = parseFloat(document.getElementById("quilometragem").value);
     const valor_fipe = parseFloat(document.getElementById("valor_fipe").value);
 
-    if (!marca || !modelo || isNaN(ano) || !cor || isNaN(kilometragem) || isNaN(valor_fipe)) {
+    if (!marca || !modelo || isNaN(ano) || !cor || isNaN(quilometragem) || isNaN(valor_fipe)) {
         alert("Por favor, preencha todos os campos antes de calcular.");
-        window.location.reload();
+        redefinirFormulario(event);
         return;
     }
 
@@ -17,16 +17,16 @@ function calcularCarro() {
         modelo,
         ano,
         cor,
-        kilometragem,
+        quilometragem,
         valor_fipe,
         anosUtilizacao: function () {
             const anoAtual = new Date().getFullYear();
             return anoAtual - this.ano;
         },
         valorMercado: function () {
-            if (this.kilometragem <= 30000) {
+            if (this.quilometragem <= 30000) {
                 return this.valor_fipe * 1.1;
-            } else if (this.kilometragem <= 50000) {
+            } else if (this.quilometragem <= 50000) {
                 return this.valor_fipe;
             } else {
                 return this.valor_fipe * 0.9;
