@@ -13,8 +13,8 @@
   
   [![HTML](https://img.shields.io/badge/Feito%20com-HTML-purple)](#) 
   [![CSS](https://img.shields.io/badge/Feito%20com-CSS-purple)](#) 
-  <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="40" height="40" />
-  <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="40" height="40" />
+  [![JS](https://img.shields.io/badge/Feito%20com-JavaScript-purple)](#) 
+  [![React](https://img.shields.io/badge/Feito%20com-React-purple)](#) 
   
 </div> 
 <p align="justify">Este é um projeto que estou desenvolvendo durante as aulas de Laboratório de Engenharia de Software (Os exercícios serão atualizados por semana).</p>
