@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     <!-- NÂO USE ISSO EM PRODUÇÃO -->
+    <!-- O babel é muito pesado
+    O certo é pegar uma versão compilada e 
+    colocar na aplicação -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="letreiro"></div>
+    <script type="text/babel">
+
+        function Letreiro() {
+            // React.useState = gerencia o estado local de um componente de função no React.
+            const [texto, setTexto] = React.useState('');
+            const textoCompleto = 'Venha estudar na Fatec';
+            let indice = 0;
+
+            const mostrarProximaLetra = () => {
+                if (indice < textoCompleto.length) {
+                    setTexto(textoCompleto.slice(0, indice + 1));
+                    indice++;
+                    setTimeout(mostrarProximaLetra, 100); // velocidade 
+                }
+            };
+            // React.useEffect = lida com efeitos colaterais.
+            React.useEffect(() => {
+                mostrarProximaLetra();
+            }, []);
+            
+            return <h1>{texto}</h1>;
+        }
+
+        function Renderizar(exibir) {
+            const container = document.getElementById(exibir);
+
+            if (container) {
+                const Elemento = () => {
+                    return <Letreiro />;
+                };
+
+                const element = <Elemento />;
+                ReactDOM.render(element, container);
+                setTimeout(() => {
+                    location.reload();
+                }, 2500);
+            } else {
+                console.error(`O elemento com o ID '${exibir}' não foi encontrado no DOM.`);
+            }
+        }
+
+        Renderizar('letreiro');
+       
+    </script>
+</body>
+
+</html>
