@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.all-components {
+  min-height: 40vh;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os cards */
+  align-items: center; /* Centraliza verticalmente os cards, se necessário */
+}
+
+.card {
+  background-color: #29b9e0;
+  width: 500px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 2px #282c34;
+  text-align: center;
+  margin: 10px; /* Espaçamento entre os cards */
+}
+
+.relogio-component p , .letreiro-component p {
+   font-size: 20px;
+   font-weight: bolder;
+   font-family:cursive;
+}
+
+h1 {
+  font-size: 50px;
+  color: #61dafb;
+  text-shadow: 3px 2px 1px #000000;
+}
+
+h2 {
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
